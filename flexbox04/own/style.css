@@ -1,0 +1,166 @@
+/* Reset & Resources */
+
+:root {
+    --white: #f3eed9;
+    --black: #222c2a;
+    --brown: #824936;
+    --ff-heading: "Playfair Display", serif;
+    --ff-primary: "Roboto", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Uitility / Reusable components */
+
+.container {
+    width: 80%;
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.row > * {
+    width: 100%;
+}
+
+.row > * + * {
+    margin-left: 3em;
+}
+
+.row--mb {
+    margin-bottom: 3em;
+}
+
+/* Components */
+
+body {
+    font-family: var(--ff-primary);
+}
+
+h1,
+h2 {
+    font-family: var(--ff-heading);
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 21px;
+}
+
+img {
+    max-width: 100%;
+    align-self: flex-start;
+}
+
+header {
+    background-color: var(--white);
+}
+
+.header__text {
+    min-height: 660px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.header__desc {
+    letter-spacing: 5px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--black);
+    font-size: 18px;
+}
+
+.header__title {
+    color: var(--brown);
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.section-1 {
+    color: var(--black);
+    padding-block: 6em;
+}
+
+.section-1__title {
+    color: var(--brown);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.section-2 {
+    background-color: var(--black);
+}
+
+.section-3 {
+    background-color: var(--brown);
+    padding-block: 1em;
+}
+
+.section-2__title {
+    margin-bottom: 1em;
+}
+
+.row--card {
+    color: var(--white);
+    padding-block: 4em;
+}
+
+.row--br {
+    background-color: var(--brown);
+}
+
+@media (max-width: 1000px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .row > * + * {
+        margin-left: 0;
+        margin-top: 3em;
+    }
+
+    .row img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .row > * + * {
+        margin-left: 0;
+        margin-top: 3em;
+    }
+
+    .row img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .row img {
+        width: 100%;
+    }
+}
